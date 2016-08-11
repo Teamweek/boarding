@@ -83,7 +83,13 @@ class InviteController < ApplicationController
       end
 
       logger.info "Adding #{tester.email} to mailing list..."
-      mailchimp.lists.subscribe(ENV["MAILCHIMP_LIST_ID"], {"email" => email})
+
+      mailchimp.lists.subscribe(
+        ENV["MAILCHIMP_LIST_ID"],
+        {"email" => email},
+        {"FNAME" => first_name, "LNAME": last_name}
+      )
+      
       logger.info "Done"
 
       @type = "success"
