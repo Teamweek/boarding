@@ -18,6 +18,14 @@
       "description": "The App ID or App Identifier (Bundle Identifier) of your app from iTunes Connect, to which the tester will be invited.",
       "required": true
     },
+    "MAILCHIMP_API_KEY": {
+      "description": "Mailchimp API key",
+      "required": true
+    },
+    "MAILCHIMP_LIST_ID": {
+      "description": "Mailchimp list ID",
+      "required": true
+    },
     "FASTLANE_ITC_TEAM_NAME": {
       "description": "Optional: If you're in multiple teams, enter the name of your iTC team here. Make sure it matches.",
       "required": false
