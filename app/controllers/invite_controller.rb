@@ -81,6 +81,11 @@ class InviteController < ApplicationController
       else
         @message = t(:message_success_pending)
       end
+
+      logger.info "Adding #{tester.email} to mailing list..."
+      mailchimp.lists.subscribe(ENV["MAILCHIMP_LIST_ID"], {"email" => email})
+      logger.info "Done"
+
       @type = "success"
     rescue => ex
       if ex.inspect.to_s.include?"EmailExists"
@@ -168,5 +173,13 @@ class InviteController < ApplicationController
         end
       end
       return false
+    end
+
+    def mailchimp
+      if !@mailchimp
+        @mailchimp = Mailchimp::API.new(ENV["MAILCHIMP_API_KEY"])
+      end
+
+      return @mailchimp
     end
 end
