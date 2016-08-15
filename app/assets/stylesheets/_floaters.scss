@@ -1,0 +1,123 @@
+.floaters {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floater {
+  position: absolute;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  transform: scale(0);
+  transition: 500ms transform cubic-bezier(.5,-0.35,.5,1.35);
+
+  &--visible {
+    transform: scale(1);
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+  }
+
+  &[data-style="1"] {
+    width: 27px;
+    height: 37px;
+
+    &:before {
+      width: 27px;
+      height: 27px;
+      background-color: #FC8E86;
+      border-radius: 14px;
+      left: 0px;
+      bottom: 0px;
+    }
+
+    &:after {
+      width: 18px;
+      height: 18px;
+      background-color: #36D9BD;
+      border-radius: 9px;
+      opacity: 0.5;
+      left: 6px;
+      top: 0px;
+    }
+  }
+
+  &[data-style="2"] {
+    width: 39px;
+    height: 34px;
+
+    &:before {
+      width: 32px;
+      height: 32px;
+      background-color: #FC8E86;
+      border-radius: 16px;
+      left: 0px;
+      bottom: 0px;
+    }
+
+    &:after {
+      width: 18px;
+      height: 18px;
+      background-color: #36D9BD;
+      border-radius: 9px;
+      opacity: 0.5;
+      right: 0px;
+      top: 0px;
+    }
+  }
+
+  &[data-style="3"] {
+    width: 32px;
+    height: 32px;
+
+    &:before {
+      width: 24px;
+      height: 24px;
+      background-color: #36D9BD;
+      border-radius: 12px;
+      right: 0px;
+      bottom: 0px;
+    }
+
+    &:after {
+      width: 19px;
+      height: 19px;
+      background-color: #FBC366;
+      border-radius: 10px;
+      opacity: 0.5;
+      left: 0px;
+      top: 0px;
+    }
+  }
+
+  &[data-style="4"] {
+    width: 33px;
+    height: 33px;
+    background-color: #FBC366;
+    border-radius: 17px;
+  }
+
+  &[data-style="5"] {
+    width: 15px;
+    height: 15px;
+    background-color: #FBC366;
+    border-radius: 8px;
+  }
+
+  &[data-style="6"] {
+    width: 18px;
+    height: 18px;
+    background-color: #36D9BD;
+    border-radius: 9px;
+  }
+}

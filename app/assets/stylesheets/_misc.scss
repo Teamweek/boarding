@@ -1,0 +1,28 @@
+.app-store-badge {
+  display: inline-block;
+  width: 169px;
+  height: 50px;
+
+  background-image: image-url('btn-ios-badge.svg');
+
+  overflow: hidden;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none !important;
+  }
+}

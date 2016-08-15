@@ -11,14 +11,11 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
-# Use jquery as the JavaScript library
-
-gem 'jquery-rails'
+gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
+gem 'bourbon', '~> 4.2', '>= 4.2.7'
 
 # Added by Felix
 gem 'spaceship', '>= 0.25.0'
-
-gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'http_accept_language', '~> 2.0.5'
 

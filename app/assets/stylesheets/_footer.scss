@@ -1,0 +1,77 @@
+.footer {
+  -js-display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  background-color: #36d9bd;
+
+  &__app-icon {
+    $icon-width: 200px;
+    $icon-height: 200px;
+
+    position: relative;
+    z-index: 2;
+    width: $icon-width;
+    height: $icon-height;
+    margin-top: 120px;
+
+    background-image: image-url('app-icon.svg');
+    background-size: $icon-width $icon-height;
+    box-shadow: 0px 20px 54px 0px rgba(0,0,0,0.10);
+    border-radius: 45px;
+  }
+
+  &__app-store {
+    margin-top: 30px;
+  }
+
+  &__nav {
+    -js-display: flex;
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    width: 960px;
+
+    li {
+      flex-grow: 1;
+      text-align: center;
+      list-style: none;
+    }
+
+    span, a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Work Sans';
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 220px;
+    height: 1px;
+    z-index: 1;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -160px;
+      width: 320px;
+      height: 1px;
+
+      background-color: #36d9bd;
+    }
+  }
+}

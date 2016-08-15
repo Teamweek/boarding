@@ -1,0 +1,75 @@
+.header {
+  position: relative;
+  z-index: 1;
+
+  &__logo {
+    &__link {
+      display: block;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin: 25px 0;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      &__link {
+        width: 126px;
+        height: 64px;
+
+        background-image: image-url('logo-desktop.svg');
+      }
+    }
+
+    &__nav {
+      @include clearfix;
+
+      &__item {
+        float: left;
+        margin-left: 30px;
+        list-style: none;
+
+        font-family: 'Work Sans';
+        font-size: 12px;
+
+        a {
+          text-decoration: none;
+          color: #7f7f7f;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 65px 0 38px;
+
+    &__logo {
+      &__link {
+        width: 122px;
+        height: 134px;
+        background-image: image-url('logo-mobile.svg');
+        background-size: contain;
+      }
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}
